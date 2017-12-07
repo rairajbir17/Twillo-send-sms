@@ -27,9 +27,9 @@ provider:
         - s3:*
       Resource: "*"
   environment:
-    TWILIO_ACCOUNT_SID: "AC1b7838a81f684b386d12199e5fcd5be6"
-    TWILIO_AUTH_TOKEN: "281035db8be9f6683037c52f154a95e1"
-    TWILIO_PHONE_NUMBER: "+17787641536"
+    TWILIO_ACCOUNT_SID: "Place Your Twilio Account SID"
+    TWILIO_AUTH_TOKEN: "Place Your Auth Token"
+    TWILIO_PHONE_NUMBER: "Place Twilio Phone Number"
 
 functions:
   postprocess:
