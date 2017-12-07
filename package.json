@@ -1,0 +1,9 @@
+{
+  "name": "twillo-service",
+  "description": "Upload a files to S3 to trigger a lambda function.",
+  "version": "1.0.0",
+  "author": "Rajbir",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

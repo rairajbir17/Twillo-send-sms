@@ -1,0 +1,43 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: twillo-service
+
+frameworkVersion: ">=1.1.0"
+
+custom:
+  bucket: twillo-bucket
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "*"
+  environment:
+    TWILIO_ACCOUNT_SID: "AC1b7838a81f684b386d12199e5fcd5be6"
+    TWILIO_AUTH_TOKEN: "281035db8be9f6683037c52f154a95e1"
+    TWILIO_PHONE_NUMBER: "+17787641536"
+
+functions:
+  postprocess:
+    handler: handler.postprocess
+    events:
+      - s3:
+          bucket: ${self:custom.bucket}
+          event: s3:ObjectCreated:*
+          rules:
+            - suffix: .png
+ 
