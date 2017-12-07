@@ -1,8 +1,8 @@
 'use strict';
 // Twilio Credentials 
-var accountSid = 'AC1b7838a81f684b386d12199e5fcd5be6';
-var authToken = '281035db8be9f6683037c52f154a95e1';
-var fromNumber = '+17787641536';
+var accountSid = 'Place your Twilio Account SID';
+var authToken = 'Place Your Auth Token';
+var fromNumber = 'Place Your Number Registered on Twillio';
 const twilioA = require('twilio')(accountSid, authToken);
 
 module.exports.postprocess = (event,context,callback) => {
